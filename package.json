@@ -1,0 +1,15 @@
+{
+	"name": "accell",
+	"version": "0.1.0",
+	"description": "",
+	"repository": "",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"format": "prettier --write \"./**/*.{js,json}\""
+	},
+	"keywords": [],
+	"devDependencies": {
+		"prettier": "^2.4.1"
+	}
+}
