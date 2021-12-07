@@ -80,3 +80,5 @@ settings.dat
 /.next/
 /out/
 
+# misc
+example/
