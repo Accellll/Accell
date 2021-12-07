@@ -5,6 +5,9 @@ const chalk = require('chalk');
 module.exports = async input => {
 	const { projName, frontend, backend, database } = input;
 
+	// platform
+	const isWindows = process.platform === 'win32' ? true : false;
+
 	const spinner = ora();
 
 	try {
@@ -17,7 +20,12 @@ module.exports = async input => {
 			database === 'MongoDB Atlas'
 		) {
 			await execa.command(`git clone https://github.com/Accellll/MERN`);
-			await execa.command(`mv MERN ${projName}`);
+
+			if (!isWindows) {
+				await execa.command(`mv MERN ${projName}`);
+			} else {
+				await execa.command(`rename MERN ${projName}`);
+			}
 		}
 
 		spinner.succeed(`Project created successfully.`);
