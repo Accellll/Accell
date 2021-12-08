@@ -27,6 +27,7 @@
 		"cli-welcome": "^2.2.2",
 		"enquirer": "^2.3.6",
 		"execa": "^5.1.0",
+		"node-async-exec": "^1.2.0",
 		"ora": "^5.1.0"
 	}
 }
