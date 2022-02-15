@@ -45,6 +45,7 @@ module.exports = async input => {
 	try {
 		console.log();
 
+		// react.js, node.js, express.js, mongodb boilerplate
 		if (
 			frontend === 'React.js' &&
 			backend === 'Node.js' &&
@@ -52,6 +53,118 @@ module.exports = async input => {
 		) {
 			await cloneBoilerplate(
 				`https://github.com/Accellll/react-express-node-mongodb`,
+				projName,
+				backend,
+				spinner
+			);
+		}
+
+		// react.js, django, mongodb boilerplate
+		if (
+			frontend === 'React.js' &&
+			backend === 'Django' &&
+			database === 'MongoDB Atlas'
+		) {
+			await cloneBoilerplate(
+				`https://github.com/Accellll/react-django-mongodb`,
+				projName,
+				backend,
+				spinner
+			);
+		}
+
+		// react.js, flask, mongodb boilerplate
+		if (
+			frontend === 'React.js' &&
+			backend === 'Flask' &&
+			database === 'MongoDB Atlas'
+		) {
+			await cloneBoilerplate(
+				`https://github.com/Accellll/react-flask-mongodb`,
+				projName,
+				backend,
+				spinner
+			);
+		}
+
+		// next.js, node.js, express.js, mongodb boilerplate
+		if (
+			frontend === 'Next.js' &&
+			backend === 'Node.js' &&
+			database === 'MongoDB Atlas'
+		) {
+			await cloneBoilerplate(
+				`https://github.com/Accellll/next-node-express-mongodb`,
+				projName,
+				backend,
+				spinner
+			);
+		}
+
+		// next.js, django, mongodb boilerplate
+		if (
+			frontend === 'Next.js' &&
+			backend === 'Django' &&
+			database === 'MongoDB Atlas'
+		) {
+			await cloneBoilerplate(
+				`https://github.com/Accellll/next-django-mongodb`,
+				projName,
+				backend,
+				spinner
+			);
+		}
+
+		// next.js, flask, mongodb boilerplate
+		if (
+			frontend === 'Next.js' &&
+			backend === 'Flask' &&
+			database === 'MongoDB Atlas'
+		) {
+			await cloneBoilerplate(
+				`https://github.com/Accellll/next-flask-mongodb`,
+				projName,
+				backend,
+				spinner
+			);
+		}
+
+		// vue.js, node.js, express.js, mongodb boilerplate
+		if (
+			frontend === 'Vue.js' &&
+			backend === 'Node.js' &&
+			database === 'MongoDB Atlas'
+		) {
+			await cloneBoilerplate(
+				`https://github.com/Accellll/vue-node-express-mongodb`,
+				projName,
+				backend,
+				spinner
+			);
+		}
+
+		// vue.js, django, mongodb boilerplate
+		if (
+			frontend === 'Vue.js' &&
+			backend === 'Django' &&
+			database === 'MongoDB Atlas'
+		) {
+			await cloneBoilerplate(
+				`https://github.com/Accellll/vue-django-mongodb`,
+				projName,
+				backend,
+				spinner
+			);
+		}
+
+		// vue.js, flask, mongodb boilerplate
+		if (
+			frontend === 'Vue.js' &&
+			backend === 'Flask' &&
+			database === 'MongoDB Atlas'
+		) {
+			await cloneBoilerplate(
+				`https://github.com/Accellll/vue-flask-mongodb`,
 				projName,
 				backend,
 				spinner
