@@ -11,6 +11,8 @@ const init = require('./src/init');
 const cli = require('./src/cli');
 
 (module.exports = async () => {
-	const input = await init();
+	const flags = [...process.argv.slice(2)];
+	const input = await init(flags);
+
 	await cli(input);
 })();
