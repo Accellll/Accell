@@ -3,6 +3,7 @@ const ora = require('ora');
 
 // stacks
 const mern = require('./stacks/react-express-node-mongodb');
+const mrf = require('./stacks/react-flask-mongodb');
 
 module.exports = async input => {
 	const { projName, frontend, backend, database } = input;
@@ -44,6 +45,7 @@ module.exports = async input => {
 			backend === 'Flask' &&
 			database === 'MongoDB'
 		) {
+			await mrf(projName, isWindows, path);
 		}
 
 		// next.js, node.js, express.js, mongodb boilerplate
