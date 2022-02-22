@@ -4,7 +4,6 @@ const fs = require('fs');
 const exec = require('node-async-exec');
 const handleError = require('node-cli-handle-error');
 const ora = require('ora');
-const chalk = require('chalk');
 
 // modules
 const { indexJS, route, connection, env } = require('./code');
