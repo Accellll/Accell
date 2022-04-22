@@ -10,6 +10,7 @@ const nfm = require('./stacks/next-flask-mongodb');
 const ndm = require('./stacks/next-django-mongodb');
 const venm = require('./stacks/vue-express-node-mongodb');
 const vfm = require('./stacks/vue-flask-mongodb');
+const vdm = require('./stacks/vue-django-mongodb');
 
 module.exports = async input => {
 	const { projName, frontend, backend, database } = input;
@@ -106,6 +107,7 @@ module.exports = async input => {
 			backend === 'Django' &&
 			database === 'MongoDB'
 		) {
+			await vdm(projName, isWindows, path);
 		}
 
 		console.log();
