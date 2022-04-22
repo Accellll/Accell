@@ -8,6 +8,7 @@ const rdm = require('./stacks/react-django-mongodb');
 const nenm = require('./stacks/next-express-node-mongodb');
 const nfm = require('./stacks/next-flask-mongodb');
 const ndm = require('./stacks/next-django-mongodb');
+const venm = require('./stacks/vue-express-node-mongodb');
 
 module.exports = async input => {
 	const { projName, frontend, backend, database } = input;
@@ -86,6 +87,7 @@ module.exports = async input => {
 			backend === 'Node.js' &&
 			database === 'MongoDB'
 		) {
+			await venm(projName, isWindows, path);
 		}
 
 		// vue.js, django, mongodb boilerplate
