@@ -16,7 +16,7 @@ module.exports = async (projName, isWindows, path) => {
 		// creating frontend
 		start(spinner, `Generating clientside code...`);
 
-		await command(`npx create-react-app ${projName}`);
+		await command(`npx create-react-app@latest ${projName}`);
 
 		succeed(spinner, `Clientside code generated successfully.`);
 
