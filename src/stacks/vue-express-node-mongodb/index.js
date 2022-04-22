@@ -55,7 +55,7 @@ module.exports = async (projName, isWindows, path) => {
 
 		succeed(spinner, `Server files created successfully.`);
 
-		// installing all dependencies
+		// installing client dependencies
 		start(spinner, `Installing client dependencies...`);
 
 		await exec({
@@ -65,7 +65,7 @@ module.exports = async (projName, isWindows, path) => {
 
 		succeed(spinner, `Dependencies installed successfully.`);
 
-		// installing all dependencies
+		// installing server dependencies
 		start(spinner, `Installing server dependencies...`);
 
 		await exec({
