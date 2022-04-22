@@ -2,8 +2,9 @@ const handleError = require('node-cli-handle-error');
 const ora = require('ora');
 
 // stacks
-const mern = require('./stacks/react-express-node-mongodb');
-const mrf = require('./stacks/react-flask-mongodb');
+const rnem = require('./stacks/react-express-node-mongodb');
+const rfm = require('./stacks/react-flask-mongodb');
+const rdm = require('./stacks/react-django-mongodb');
 
 module.exports = async input => {
 	const { projName, frontend, backend, database } = input;
@@ -28,7 +29,7 @@ module.exports = async input => {
 			backend === 'Node.js' &&
 			database === 'MongoDB'
 		) {
-			await mern(projName, isWindows, path);
+			await rnem(projName, isWindows, path);
 		}
 
 		// react.js, django, mongodb boilerplate
@@ -37,6 +38,7 @@ module.exports = async input => {
 			backend === 'Django' &&
 			database === 'MongoDB'
 		) {
+			await rdm(projName, isWindows, path);
 		}
 
 		// react.js, flask, mongodb boilerplate
@@ -45,7 +47,7 @@ module.exports = async input => {
 			backend === 'Flask' &&
 			database === 'MongoDB'
 		) {
-			await mrf(projName, isWindows, path);
+			await rfm(projName, isWindows, path);
 		}
 
 		// next.js, node.js, express.js, mongodb boilerplate
