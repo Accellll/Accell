@@ -1,10 +1,22 @@
-const execa = require('execa');
-const exec = require('node-async-exec');
 const handleError = require('node-cli-handle-error');
 const ora = require('ora');
-const chalk = require('chalk');
 
-const cloneBoilerplate = async (url, projName, backend, spinner) => {
+// stacks
+const renm = require('./stacks/react-express-node-mongodb');
+const rfm = require('./stacks/react-flask-mongodb');
+const rdm = require('./stacks/react-django-mongodb');
+const nenm = require('./stacks/next-express-node-mongodb');
+const nfm = require('./stacks/next-flask-mongodb');
+const ndm = require('./stacks/next-django-mongodb');
+const venm = require('./stacks/vue-express-node-mongodb');
+const vfm = require('./stacks/vue-flask-mongodb');
+const vdm = require('./stacks/vue-django-mongodb');
+
+module.exports = async input => {
+	const { projName, frontend, backend, database } = input;
+
+	const spinner = ora();
+
 	// platform
 	const isWindows = process.platform === 'win32' ? true : false;
 
@@ -13,35 +25,6 @@ const cloneBoilerplate = async (url, projName, backend, spinner) => {
 	isWindows
 		? (path = `${process.cwd()}\\${projName}`)
 		: (path = `${process.cwd()}/${projName}`);
-
-	spinner.start(`${chalk.bold.dim(`Generating project...`)}`);
-	await execa.command(`git clone ${url}`);
-
-	// get default name
-	const urlParts = url.split('/');
-	const defaultName = urlParts[urlParts.length - 1];
-
-	if (!isWindows) {
-		await execa.command(`mv ${defaultName} ${projName}`);
-	} else {
-		await execa.command(`rename ${defaultName} ${projName}`);
-	}
-
-	spinner.succeed(`Project created successfully.`);
-
-	spinner.start(`${chalk.bold.dim(`Installing dependencies...`)}`);
-	await exec({ path, cmd: `npm install` });
-	if (backend === 'Node.js') {
-		await exec({ path: `${path}/server`, cmd: `npm install` });
-	}
-
-	spinner.succeed(`Successfully installed dependency.`);
-};
-
-module.exports = async input => {
-	const { projName, frontend, backend, database } = input;
-
-	const spinner = ora();
 
 	try {
 		console.log();
@@ -52,26 +35,7 @@ module.exports = async input => {
 			backend === 'Node.js' &&
 			database === 'MongoDB'
 		) {
-			await cloneBoilerplate(
-				`https://github.com/Accellll/react-express-node-mongodb`,
-				projName,
-				backend,
-				spinner
-			);
-		}
-
-		// react.js, django, mongodb boilerplate
-		if (
-			frontend === 'React.js' &&
-			backend === 'Django' &&
-			database === 'MongoDB'
-		) {
-			await cloneBoilerplate(
-				`https://github.com/Accellll/react-django-mongodb`,
-				projName,
-				backend,
-				spinner
-			);
+			await renm(projName, isWindows, path);
 		}
 
 		// react.js, flask, mongodb boilerplate
@@ -80,12 +44,16 @@ module.exports = async input => {
 			backend === 'Flask' &&
 			database === 'MongoDB'
 		) {
-			await cloneBoilerplate(
-				`https://github.com/Accellll/react-flask-mongodb`,
-				projName,
-				backend,
-				spinner
-			);
+			await rfm(projName, isWindows, path);
+		}
+
+		// react.js, django, mongodb boilerplate
+		if (
+			frontend === 'React.js' &&
+			backend === 'Django' &&
+			database === 'MongoDB'
+		) {
+			await rdm(projName, isWindows, path);
 		}
 
 		// next.js, node.js, express.js, mongodb boilerplate
@@ -94,26 +62,7 @@ module.exports = async input => {
 			backend === 'Node.js' &&
 			database === 'MongoDB'
 		) {
-			await cloneBoilerplate(
-				`https://github.com/Accellll/next-node-express-mongodb`,
-				projName,
-				backend,
-				spinner
-			);
-		}
-
-		// next.js, django, mongodb boilerplate
-		if (
-			frontend === 'Next.js' &&
-			backend === 'Django' &&
-			database === 'MongoDB'
-		) {
-			await cloneBoilerplate(
-				`https://github.com/Accellll/next-django-mongodb`,
-				projName,
-				backend,
-				spinner
-			);
+			await nenm(projName, isWindows, path);
 		}
 
 		// next.js, flask, mongodb boilerplate
@@ -122,12 +71,16 @@ module.exports = async input => {
 			backend === 'Flask' &&
 			database === 'MongoDB'
 		) {
-			await cloneBoilerplate(
-				`https://github.com/Accellll/next-flask-mongodb`,
-				projName,
-				backend,
-				spinner
-			);
+			await nfm(projName, isWindows, path);
+		}
+
+		// next.js, django, mongodb boilerplate
+		if (
+			frontend === 'Next.js' &&
+			backend === 'Django' &&
+			database === 'MongoDB'
+		) {
+			await ndm(projName, isWindows, path);
 		}
 
 		// vue.js, node.js, express.js, mongodb boilerplate
@@ -136,26 +89,7 @@ module.exports = async input => {
 			backend === 'Node.js' &&
 			database === 'MongoDB'
 		) {
-			await cloneBoilerplate(
-				`https://github.com/Accellll/vue-node-express-mongodb`,
-				projName,
-				backend,
-				spinner
-			);
-		}
-
-		// vue.js, django, mongodb boilerplate
-		if (
-			frontend === 'Vue.js' &&
-			backend === 'Django' &&
-			database === 'MongoDB'
-		) {
-			await cloneBoilerplate(
-				`https://github.com/Accellll/vue-django-mongodb`,
-				projName,
-				backend,
-				spinner
-			);
+			await venm(projName, isWindows, path);
 		}
 
 		// vue.js, flask, mongodb boilerplate
@@ -164,12 +98,16 @@ module.exports = async input => {
 			backend === 'Flask' &&
 			database === 'MongoDB'
 		) {
-			await cloneBoilerplate(
-				`https://github.com/Accellll/vue-flask-mongodb`,
-				projName,
-				backend,
-				spinner
-			);
+			await vfm(projName, isWindows, path);
+		}
+
+		// vue.js, django, mongodb boilerplate
+		if (
+			frontend === 'Vue.js' &&
+			backend === 'Django' &&
+			database === 'MongoDB'
+		) {
+			await vdm(projName, isWindows, path);
 		}
 
 		console.log();
