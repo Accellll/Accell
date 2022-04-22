@@ -11,6 +11,7 @@ const ndm = require('./stacks/next-django-mongodb');
 const venm = require('./stacks/vue-express-node-mongodb');
 const vfm = require('./stacks/vue-flask-mongodb');
 const vdm = require('./stacks/vue-django-mongodb');
+const renf = require('./stacks/react-express-node-firebase');
 
 module.exports = async input => {
 	const { projName, frontend, backend, database } = input;
@@ -108,6 +109,14 @@ module.exports = async input => {
 			database === 'MongoDB'
 		) {
 			await vdm(projName, isWindows, path);
+		}
+
+		if (
+			frontend === 'React.js' &&
+			backend === 'Node.js' &&
+			database === 'Firebase'
+		) {
+			await renf(projName, isWindows, path);
 		}
 
 		console.log();
