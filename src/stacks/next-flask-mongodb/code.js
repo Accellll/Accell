@@ -13,11 +13,10 @@ app = Flask(__name__)
 # enable resource sharing between frontend and server
 CORS(app)
 
-# DB
-mongo = PyMongo()
+# DB (uncomment when you have added your database details in .env file)
+""" mongo = PyMongo()
 app.config['MONGO_URI'] = os.getenv('MONGODB_ATLAS_DB_LINK')
-
-mongo.init_app(app)
+mongo.init_app(app) """
 
 # ROUTES
 @app.route('/hello', methods=['GET'])

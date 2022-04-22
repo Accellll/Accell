@@ -11,8 +11,8 @@ require('dotenv').config();
 const cors = require('cors');
 const initDB = require('./db/connection');
 
-// initialing database
-initDB();
+// initialing database (uncomment when you have added your database details in .env file)
+// initDB();
 
 // importing routes
 const hello = require('./routes/hello');

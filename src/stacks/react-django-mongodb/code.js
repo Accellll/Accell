@@ -77,7 +77,8 @@ WSGI_APPLICATION = 'server.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
+# (uncomment when you have added your database details in .env file)
+""" DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'your-db-name',
@@ -95,7 +96,7 @@ DATABASES = {
            "password": os.getenv('DATABASE_PASSWORD'),
            "authMechanism": "SCRAM-SHA-1",
     },
-}
+} """
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
