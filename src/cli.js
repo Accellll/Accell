@@ -9,6 +9,7 @@ const nenm = require('./stacks/next-express-node-mongodb');
 const nfm = require('./stacks/next-flask-mongodb');
 const ndm = require('./stacks/next-django-mongodb');
 const venm = require('./stacks/vue-express-node-mongodb');
+const vfm = require('./stacks/vue-flask-mongodb');
 
 module.exports = async input => {
 	const { projName, frontend, backend, database } = input;
@@ -90,18 +91,19 @@ module.exports = async input => {
 			await venm(projName, isWindows, path);
 		}
 
-		// vue.js, django, mongodb boilerplate
-		if (
-			frontend === 'Vue.js' &&
-			backend === 'Django' &&
-			database === 'MongoDB'
-		) {
-		}
-
 		// vue.js, flask, mongodb boilerplate
 		if (
 			frontend === 'Vue.js' &&
 			backend === 'Flask' &&
+			database === 'MongoDB'
+		) {
+			await vfm(projName, isWindows, path);
+		}
+
+		// vue.js, django, mongodb boilerplate
+		if (
+			frontend === 'Vue.js' &&
+			backend === 'Django' &&
 			database === 'MongoDB'
 		) {
 		}
