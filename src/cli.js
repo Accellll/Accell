@@ -6,6 +6,7 @@ const renm = require('./stacks/react-express-node-mongodb');
 const rfm = require('./stacks/react-flask-mongodb');
 const rdm = require('./stacks/react-django-mongodb');
 const nenm = require('./stacks/next-express-node-mongodb');
+const nfm = require('./stacks/next-flask-mongodb');
 
 module.exports = async input => {
 	const { projName, frontend, backend, database } = input;
@@ -33,15 +34,6 @@ module.exports = async input => {
 			await renm(projName, isWindows, path);
 		}
 
-		// react.js, django, mongodb boilerplate
-		if (
-			frontend === 'React.js' &&
-			backend === 'Django' &&
-			database === 'MongoDB'
-		) {
-			await rdm(projName, isWindows, path);
-		}
-
 		// react.js, flask, mongodb boilerplate
 		if (
 			frontend === 'React.js' &&
@@ -49,6 +41,15 @@ module.exports = async input => {
 			database === 'MongoDB'
 		) {
 			await rfm(projName, isWindows, path);
+		}
+
+		// react.js, django, mongodb boilerplate
+		if (
+			frontend === 'React.js' &&
+			backend === 'Django' &&
+			database === 'MongoDB'
+		) {
+			await rdm(projName, isWindows, path);
 		}
 
 		// next.js, node.js, express.js, mongodb boilerplate
@@ -60,18 +61,19 @@ module.exports = async input => {
 			await nenm(projName, isWindows, path);
 		}
 
-		// next.js, django, mongodb boilerplate
-		if (
-			frontend === 'Next.js' &&
-			backend === 'Django' &&
-			database === 'MongoDB'
-		) {
-		}
-
 		// next.js, flask, mongodb boilerplate
 		if (
 			frontend === 'Next.js' &&
 			backend === 'Flask' &&
+			database === 'MongoDB'
+		) {
+			await nfm(projName, isWindows, path);
+		}
+
+		// next.js, django, mongodb boilerplate
+		if (
+			frontend === 'Next.js' &&
+			backend === 'Django' &&
 			database === 'MongoDB'
 		) {
 		}
