@@ -19,6 +19,7 @@ const nff = require('./stacks/next-flask-firebase');
 const ndf = require('./stacks/next-django-firebase');
 const venf = require('./stacks/vue-express-node-firebase');
 const vff = require('./stacks/vue-flask-firebase');
+const vdf = require('./stacks/vue-django-firebase');
 
 module.exports = async input => {
 	const { projName, frontend, backend, database } = input;
@@ -196,6 +197,7 @@ module.exports = async input => {
 			backend === 'Django' &&
 			database === 'Firebase'
 		) {
+			await vdf(projName, isWindows, path);
 		}
 
 		console.log();
