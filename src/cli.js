@@ -12,6 +12,7 @@ const venm = require('./stacks/vue-express-node-mongodb');
 const vfm = require('./stacks/vue-flask-mongodb');
 const vdm = require('./stacks/vue-django-mongodb');
 const renf = require('./stacks/react-express-node-firebase');
+const rff = require('./stacks/react-flask-firebase');
 
 module.exports = async input => {
 	const { projName, frontend, backend, database } = input;
@@ -126,6 +127,7 @@ module.exports = async input => {
 			backend === 'Flask' &&
 			database === 'Firebase'
 		) {
+			await rff(projName, isWindows, path);
 		}
 
 		// react.js, django, firebase boilerplate
