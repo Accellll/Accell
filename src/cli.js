@@ -11,6 +11,8 @@ const ndm = require('./stacks/next-django-mongodb');
 const venm = require('./stacks/vue-express-node-mongodb');
 const vfm = require('./stacks/vue-flask-mongodb');
 const vdm = require('./stacks/vue-django-mongodb');
+const renf = require('./stacks/react-express-node-firebase');
+const rff = require('./stacks/react-flask-firebase');
 
 module.exports = async input => {
 	const { projName, frontend, backend, database } = input;
@@ -108,6 +110,80 @@ module.exports = async input => {
 			database === 'MongoDB'
 		) {
 			await vdm(projName, isWindows, path);
+		}
+
+		// react.js, node, express, firebase boilerplate
+		if (
+			frontend === 'React.js' &&
+			backend === 'Node.js' &&
+			database === 'Firebase'
+		) {
+			await renf(projName, isWindows, path);
+		}
+
+		// react.js, flask, firebase boilerplate
+		if (
+			frontend === 'React.js' &&
+			backend === 'Flask' &&
+			database === 'Firebase'
+		) {
+			await rff(projName, isWindows, path);
+		}
+
+		// react.js, django, firebase boilerplate
+		if (
+			frontend === 'React.js' &&
+			backend === 'Django' &&
+			database === 'Firebase'
+		) {
+		}
+
+		// next.js, node.js, express.js, firebase boilerplate
+		if (
+			frontend === 'Next.js' &&
+			backend === 'Node.js' &&
+			database === 'Firebase'
+		) {
+		}
+
+		// next.js, flask, firebase boilerplate
+		if (
+			frontend === 'Next.js' &&
+			backend === 'Flask' &&
+			database === 'Firebase'
+		) {
+		}
+
+		// next.js, django, firebase boilerplate
+		if (
+			frontend === 'Next.js' &&
+			backend === 'Django' &&
+			database === 'Firebase'
+		) {
+		}
+
+		// vue.js, node.js, express.js, firebase boilerplate
+		if (
+			frontend === 'Vue.js' &&
+			backend === 'Node.js' &&
+			database === 'Firebase'
+		) {
+		}
+
+		// vue.js, flask, firebase boilerplate
+		if (
+			frontend === 'Vue.js' &&
+			backend === 'Flask' &&
+			database === 'Firebase'
+		) {
+		}
+
+		// vue.js, django, firebase boilerplate
+		if (
+			frontend === 'Vue.js' &&
+			backend === 'Django' &&
+			database === 'Firebase'
+		) {
 		}
 
 		console.log();
