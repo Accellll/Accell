@@ -14,6 +14,7 @@ const vdm = require('./stacks/vue-django-mongodb');
 const renf = require('./stacks/react-express-node-firebase');
 const rff = require('./stacks/react-flask-firebase');
 const rdf = require('./stacks/react-django-firebase');
+const nenf = require('./stacks/next-express-node-firebase');
 
 module.exports = async input => {
 	const { projName, frontend, backend, database } = input;
@@ -146,6 +147,7 @@ module.exports = async input => {
 			backend === 'Node.js' &&
 			database === 'Firebase'
 		) {
+			await nenf(projName, isWindows, path);
 		}
 
 		// next.js, flask, firebase boilerplate
