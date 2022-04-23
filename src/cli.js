@@ -111,12 +111,77 @@ module.exports = async input => {
 			await vdm(projName, isWindows, path);
 		}
 
+		// react.js, node, express, firebase boilerplate
 		if (
 			frontend === 'React.js' &&
 			backend === 'Node.js' &&
 			database === 'Firebase'
 		) {
 			await renf(projName, isWindows, path);
+		}
+
+		// react.js, flask, firebase boilerplate
+		if (
+			frontend === 'React.js' &&
+			backend === 'Flask' &&
+			database === 'Firebase'
+		) {
+		}
+
+		// react.js, django, firebase boilerplate
+		if (
+			frontend === 'React.js' &&
+			backend === 'Django' &&
+			database === 'Firebase'
+		) {
+		}
+
+		// next.js, node.js, express.js, firebase boilerplate
+		if (
+			frontend === 'Next.js' &&
+			backend === 'Node.js' &&
+			database === 'Firebase'
+		) {
+		}
+
+		// next.js, flask, firebase boilerplate
+		if (
+			frontend === 'Next.js' &&
+			backend === 'Flask' &&
+			database === 'Firebase'
+		) {
+		}
+
+		// next.js, django, firebase boilerplate
+		if (
+			frontend === 'Next.js' &&
+			backend === 'Django' &&
+			database === 'Firebase'
+		) {
+		}
+
+		// vue.js, node.js, express.js, firebase boilerplate
+		if (
+			frontend === 'Vue.js' &&
+			backend === 'Node.js' &&
+			database === 'Firebase'
+		) {
+		}
+
+		// vue.js, flask, firebase boilerplate
+		if (
+			frontend === 'Vue.js' &&
+			backend === 'Flask' &&
+			database === 'Firebase'
+		) {
+		}
+
+		// vue.js, django, firebase boilerplate
+		if (
+			frontend === 'Vue.js' &&
+			backend === 'Django' &&
+			database === 'Firebase'
+		) {
 		}
 
 		console.log();
