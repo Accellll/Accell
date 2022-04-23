@@ -18,6 +18,7 @@ const nenf = require('./stacks/next-express-node-firebase');
 const nff = require('./stacks/next-flask-firebase');
 const ndf = require('./stacks/next-django-firebase');
 const venf = require('./stacks/vue-express-node-firebase');
+const vff = require('./stacks/vue-flask-firebase');
 
 module.exports = async input => {
 	const { projName, frontend, backend, database } = input;
@@ -186,6 +187,7 @@ module.exports = async input => {
 			backend === 'Flask' &&
 			database === 'Firebase'
 		) {
+			await vff(projName, isWindows, path);
 		}
 
 		// vue.js, django, firebase boilerplate
