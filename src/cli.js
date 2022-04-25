@@ -21,6 +21,7 @@ const venf = require('./stacks/vue-express-node-firebase');
 const vff = require('./stacks/vue-flask-firebase');
 const vdf = require('./stacks/vue-django-firebase');
 const rensql = require('./stacks/react-express-node-mysql');
+const rfsql = require('./stacks/react-flask-mysql');
 
 module.exports = async input => {
 	const { projName, frontend, backend, database } = input;
@@ -216,6 +217,7 @@ module.exports = async input => {
 			backend === 'Flask' &&
 			database === 'MySQL'
 		) {
+			await rfsql(projName, isWindows, path);
 		}
 
 		// react.js, django, firebase boilerplate
