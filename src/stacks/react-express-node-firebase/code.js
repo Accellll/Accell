@@ -32,12 +32,12 @@ const firebase = `const { initializeApp } = require('firebase/app');
 const { getFirestore } = require('firebase/firestore');
 
 const firebaseConfig = {
-    apiKey: \`\${process.env.NEXT_PUBLIC_Firebase_API_Key}\`,
-    authDomain: \`\${process.env.NEXT_PUBLIC_Auth_Domain}\`,
-    projectId: \`\${process.env.NEXT_PUBLIC_Project_Id}\`,
-    storageBucket: \`\${process.env.NEXT_PUBLIC_Storage_Bucket}\`,
-    messagingSenderId: \`\${process.env.NEXT_PUBLIC_Message_Sender_Id}\`,
-    appId: \`\${process.env.NEXT_PUBLIC_App_Id}\`,
+    apiKey: \`\${process.env.Firebase_API_Key}\`,
+    authDomain: \`\${process.env.Auth_Domain}\`,
+    projectId: \`\${process.env.Project_Id}\`,
+    storageBucket: \`\${process.env.Storage_Bucket}\`,
+    messagingSenderId: \`\${process.env.Message_Sender_Id}\`,
+    appId: \`\${process.env.App_Id}\`,
 };
 
 initializeApp(firebaseConfig);
@@ -55,11 +55,11 @@ router.get('/', function (req, res) {
 
 module.exports = router;`;
 
-const env = `NEXT_PUBLIC_Firebase_API_Key=REPLACE_Firebase_API_Key
-NEXT_PUBLIC_Auth_Domain=REPLACE_Auth_Domain
-NEXT_PUBLIC_Project_Id=REPLACE_Project_Id
-NEXT_PUBLIC_Storage_Bucket=REPLACE_Storage_Bucket
-NEXT_PUBLIC_Message_Sender_Id=REPLACE_Message_Sender_Id
-NEXT_PUBLIC_App_Id=REPLACE_App_Id`;
+const env = `Firebase_API_Key=REPLACE_Firebase_API_Key
+Auth_Domain=REPLACE_Auth_Domain
+Project_Id=REPLACE_Project_Id
+Storage_Bucket=REPLACE_Storage_Bucket
+Message_Sender_Id=REPLACE_Message_Sender_Id
+App_Id=REPLACE_App_Id`;
 
 module.exports = { indexJS, route, firebase, env };
