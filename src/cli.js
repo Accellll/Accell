@@ -2,6 +2,8 @@ const handleError = require('node-cli-handle-error');
 const ora = require('ora');
 
 // stacks
+
+// mongodb
 const renm = require('./stacks/react-express-node-mongodb');
 const rfm = require('./stacks/react-flask-mongodb');
 const rdm = require('./stacks/react-django-mongodb');
@@ -11,6 +13,8 @@ const ndm = require('./stacks/next-django-mongodb');
 const venm = require('./stacks/vue-express-node-mongodb');
 const vfm = require('./stacks/vue-flask-mongodb');
 const vdm = require('./stacks/vue-django-mongodb');
+
+// firebase
 const renf = require('./stacks/react-express-node-firebase');
 const rff = require('./stacks/react-flask-firebase');
 const rdf = require('./stacks/react-django-firebase');
@@ -20,6 +24,8 @@ const ndf = require('./stacks/next-django-firebase');
 const venf = require('./stacks/vue-express-node-firebase');
 const vff = require('./stacks/vue-flask-firebase');
 const vdf = require('./stacks/vue-django-firebase');
+
+// mysql
 const rensql = require('./stacks/react-express-node-mysql');
 const rfsql = require('./stacks/react-flask-mysql');
 const rdsql = require('./stacks/react-django-mysql');
@@ -209,7 +215,7 @@ module.exports = async input => {
 			await vdf(projName, isWindows, path);
 		}
 
-		// react.js, node, express, firebase boilerplate
+		// react.js, node, express, MySQL boilerplate
 		if (
 			frontend === 'React.js' &&
 			backend === 'Node.js' &&
@@ -218,7 +224,7 @@ module.exports = async input => {
 			await rensql(projName, isWindows, path);
 		}
 
-		// react.js, flask, firebase boilerplate
+		// react.js, flask, MySQL boilerplate
 		if (
 			frontend === 'React.js' &&
 			backend === 'Flask' &&
@@ -227,7 +233,7 @@ module.exports = async input => {
 			await rfsql(projName, isWindows, path);
 		}
 
-		// react.js, django, firebase boilerplate
+		// react.js, django, MySQL boilerplate
 		if (
 			frontend === 'React.js' &&
 			backend === 'Django' &&
@@ -236,7 +242,7 @@ module.exports = async input => {
 			await rdsql(projName, isWindows, path);
 		}
 
-		// next.js, node.js, express.js, firebase boilerplate
+		// next.js, node.js, express.js, MySQL boilerplate
 		if (
 			frontend === 'Next.js' &&
 			backend === 'Node.js' &&
@@ -245,7 +251,7 @@ module.exports = async input => {
 			await nensql(projName, isWindows, path);
 		}
 
-		// next.js, flask, firebase boilerplate
+		// next.js, flask, MySQL boilerplate
 		if (
 			frontend === 'Next.js' &&
 			backend === 'Flask' &&
@@ -254,7 +260,7 @@ module.exports = async input => {
 			await nfsql(projName, isWindows, path);
 		}
 
-		// next.js, django, firebase boilerplate
+		// next.js, django, MySQL boilerplate
 		if (
 			frontend === 'Next.js' &&
 			backend === 'Django' &&
@@ -263,7 +269,7 @@ module.exports = async input => {
 			await ndsql(projName, isWindows, path);
 		}
 
-		// vue.js, node.js, express.js, firebase boilerplate
+		// vue.js, node.js, express.js, MySQL boilerplate
 		if (
 			frontend === 'Vue.js' &&
 			backend === 'Node.js' &&
@@ -272,7 +278,7 @@ module.exports = async input => {
 			await vensql(projName, isWindows, path);
 		}
 
-		// vue.js, flask, firebase boilerplate
+		// vue.js, flask, MySQL boilerplate
 		if (
 			frontend === 'Vue.js' &&
 			backend === 'Flask' &&
@@ -281,7 +287,7 @@ module.exports = async input => {
 			await vfsql(projName, isWindows, path);
 		}
 
-		// vue.js, django, firebase boilerplate
+		// vue.js, django, MySQL boilerplate
 		if (
 			frontend === 'Vue.js' &&
 			backend === 'Django' &&
