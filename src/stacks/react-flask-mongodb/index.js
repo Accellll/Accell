@@ -24,7 +24,6 @@ module.exports = async (projName, isWindows, path) => {
 
 		// creating and writing in server files
 		await exec({ path, cmd: `mkdir server` });
-		await exec({ path, cmd: `virtualenv env` });
 		await exec({ path: `${path}/server`, cmd: `touch app.py` });
 		await exec({ path: `${path}/server`, cmd: `touch .env` });
 		await exec({ path: `${path}/server`, cmd: `touch requirements.txt` });
