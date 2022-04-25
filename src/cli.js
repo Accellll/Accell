@@ -20,6 +20,7 @@ const ndf = require('./stacks/next-django-firebase');
 const venf = require('./stacks/vue-express-node-firebase');
 const vff = require('./stacks/vue-flask-firebase');
 const vdf = require('./stacks/vue-django-firebase');
+const rensql = require('./stacks/react-express-node-mysql');
 
 module.exports = async input => {
 	const { projName, frontend, backend, database } = input;
@@ -198,6 +199,79 @@ module.exports = async input => {
 			database === 'Firebase'
 		) {
 			await vdf(projName, isWindows, path);
+		}
+
+		// react.js, node, express, firebase boilerplate
+		if (
+			frontend === 'React.js' &&
+			backend === 'Node.js' &&
+			database === 'MySQL'
+		) {
+			await rensql(projName, isWindows, path);
+		}
+
+		// react.js, flask, firebase boilerplate
+		if (
+			frontend === 'React.js' &&
+			backend === 'Flask' &&
+			database === 'MySQL'
+		) {
+		}
+
+		// react.js, django, firebase boilerplate
+		if (
+			frontend === 'React.js' &&
+			backend === 'Django' &&
+			database === 'MySQL'
+		) {
+		}
+
+		// next.js, node.js, express.js, firebase boilerplate
+		if (
+			frontend === 'Next.js' &&
+			backend === 'Node.js' &&
+			database === 'MySQL'
+		) {
+		}
+
+		// next.js, flask, firebase boilerplate
+		if (
+			frontend === 'Next.js' &&
+			backend === 'Flask' &&
+			database === 'MySQL'
+		) {
+		}
+
+		// next.js, django, firebase boilerplate
+		if (
+			frontend === 'Next.js' &&
+			backend === 'Django' &&
+			database === 'MySQL'
+		) {
+		}
+
+		// vue.js, node.js, express.js, firebase boilerplate
+		if (
+			frontend === 'Vue.js' &&
+			backend === 'Node.js' &&
+			database === 'MySQL'
+		) {
+		}
+
+		// vue.js, flask, firebase boilerplate
+		if (
+			frontend === 'Vue.js' &&
+			backend === 'Flask' &&
+			database === 'MySQL'
+		) {
+		}
+
+		// vue.js, django, firebase boilerplate
+		if (
+			frontend === 'Vue.js' &&
+			backend === 'Django' &&
+			database === 'MySQL'
+		) {
 		}
 
 		console.log();
