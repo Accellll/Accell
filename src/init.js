@@ -49,7 +49,7 @@ const getBackendTech = async flags => {
 	const beTech = new Select({
 		name: 'Backend',
 		message: 'Select Your Desired Backend Framework/Libary',
-		choices: ['Node.js', 'Django', 'Flask']
+		choices: ['Node.js', 'Flask', 'Django']
 	});
 	backend = await beTech.run();
 	return backend;
