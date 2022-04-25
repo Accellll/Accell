@@ -23,6 +23,12 @@ const vdf = require('./stacks/vue-django-firebase');
 const rensql = require('./stacks/react-express-node-mysql');
 const rfsql = require('./stacks/react-flask-mysql');
 const rdsql = require('./stacks/react-django-mysql');
+const nensql = require('./stacks/next-express-node-mysql');
+const nfsql = require('./stacks/next-flask-mysql');
+const ndsql = require('./stacks/next-django-mysql');
+const vensql = require('./stacks/vue-express-node-mysql');
+const vfsql = require('./stacks/vue-flask-mysql');
+const vdsql = require('./stacks/vue-django-mysql');
 
 module.exports = async input => {
 	const { projName, frontend, backend, database } = input;
@@ -236,6 +242,7 @@ module.exports = async input => {
 			backend === 'Node.js' &&
 			database === 'MySQL'
 		) {
+			await nensql(projName, isWindows, path);
 		}
 
 		// next.js, flask, firebase boilerplate
@@ -244,6 +251,7 @@ module.exports = async input => {
 			backend === 'Flask' &&
 			database === 'MySQL'
 		) {
+			await nfsql(projName, isWindows, path);
 		}
 
 		// next.js, django, firebase boilerplate
@@ -252,6 +260,7 @@ module.exports = async input => {
 			backend === 'Django' &&
 			database === 'MySQL'
 		) {
+			await ndsql(projName, isWindows, path);
 		}
 
 		// vue.js, node.js, express.js, firebase boilerplate
@@ -260,6 +269,7 @@ module.exports = async input => {
 			backend === 'Node.js' &&
 			database === 'MySQL'
 		) {
+			await vensql(projName, isWindows, path);
 		}
 
 		// vue.js, flask, firebase boilerplate
@@ -268,6 +278,7 @@ module.exports = async input => {
 			backend === 'Flask' &&
 			database === 'MySQL'
 		) {
+			await vfsql(projName, isWindows, path);
 		}
 
 		// vue.js, django, firebase boilerplate
@@ -276,6 +287,7 @@ module.exports = async input => {
 			backend === 'Django' &&
 			database === 'MySQL'
 		) {
+			await vdsql(projName, isWindows, path);
 		}
 
 		console.log();
