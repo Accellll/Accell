@@ -295,8 +295,6 @@ module.exports = async input => {
 		) {
 			await vdsql(projName, isWindows, path);
 		}
-
-		console.log();
 	} catch (err) {
 		spinner.fail(`Couldn't create the project.`);
 		console.log();

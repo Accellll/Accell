@@ -9,10 +9,12 @@
 
 const init = require('./src/init');
 const cli = require('./src/cli');
+const exit = require('./src/exit');
 
 (module.exports = async () => {
 	const flags = [...process.argv.slice(2)];
 	const input = await init(flags);
 
 	await cli(input);
+	await exit();
 })();
