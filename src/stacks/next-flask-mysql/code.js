@@ -25,7 +25,7 @@ mysql = MySQL(app)
 @app.route('/')
 def index():
 	cur = mysql.connection.cursor()
-	cur.execute('''INSERT INTO USERS VALUES ('irfan', 'irfanpas')''')
+	cur.execute('''CREATE DATABASE USER''')
 	mysql.connection.commit()
 	return 'DONE' """
 
