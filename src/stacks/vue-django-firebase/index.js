@@ -31,7 +31,6 @@ module.exports = async (projName, isWindows, path) => {
 		await exec({ path, cmd: `pip install django` });
 		await exec({ path, cmd: `django-admin startproject server` });
 		await exec({ path: `${path}/server`, cmd: `mkdir config` });
-		await exec({ path: `${path}/server`, cmd: `virtualenv env` });
 		await exec({ path: `${path}/server/config`, cmd: `touch firebase.py` });
 		await exec({ path: `${path}/server/config`, cmd: `touch __init__.py` });
 		await exec({ path: `${path}/server`, cmd: `touch requirements.txt` });

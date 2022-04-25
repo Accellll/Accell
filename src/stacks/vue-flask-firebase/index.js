@@ -30,7 +30,7 @@ module.exports = async (projName, isWindows, path) => {
 		// creating and writing in server files
 		await exec({ path, cmd: `mkdir server` });
 		await exec({ path: `${path}/server`, cmd: `mkdir config` });
-		await exec({ path: `${path}/server`, cmd: `virtualenv env` });
+
 		await exec({ path: `${path}/server/config`, cmd: `touch firebase.py` });
 		await exec({ path: `${path}/server/config`, cmd: `touch __init__.py` });
 		await exec({ path: `${path}/server`, cmd: `touch app.py` });
