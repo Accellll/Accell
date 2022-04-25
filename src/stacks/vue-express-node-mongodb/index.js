@@ -73,6 +73,11 @@ module.exports = async (projName, isWindows, path) => {
 			cmd: `npm install express cors dotenv mongoose`
 		});
 
+		await exec({
+			path: `${path}/server`,
+			cmd: `npx @msaaddev/gitignore`
+		});
+
 		succeed(spinner, `Dependencies installed successfully.`);
 	} catch (err) {
 		fail(spinner, `Couldn't create the project.`);
