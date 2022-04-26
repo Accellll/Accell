@@ -264,7 +264,7 @@
             const commandArea = document.getElementById('command-area');
             const placeCommand = document.getElementById('command-place');
 
-            const command = `npx accell ${projectName} --${fe} --${be} --${db}`;
+            const command = `npx accell@latest ${projectName} --${fe} --${be} --${db}`;
             placeCommand.innerText = command;
             commandArea.style.display = 'block';
             navigator.clipboard.writeText(command).then().catch((err)=> {console.log(err);});
