@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accell – Your Productivity Partner</title>
+    <link rel="icon" href="dist/images/logo.svg" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+	<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</head>
+<body class="is-boxed has-animations">
+    <div class="body-wrap">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+							<a href="https://github.com/Accellll" target="_blank">
+                                <img class="header-logo-image" src="dist/images/logo.svg" alt="Logo">
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero" style="height: 100vh;">
+                <div class="container">
+                    <div class="hero-inner">
+						<div class="hero-copy">
+	                        <h1 class="hero-title mt-0">Have you heard about Accell!?</h1>
+	                        <p class="hero-paragraph">It is an open-source command-line tool to quickly generating boilerplates of different stacks.</p>
+	                        <div class="hero-cta"><a class="button button-primary" href="#command-generator-area">Try it out</a><a class="button" href="https://github.com/Accellll">Get in touch</a></div>
+						</div>
+						<div class="hero-figure anime-element">
+							<svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
+								<rect width="528" height="396" style="fill:transparent;" />
+							</svg>
+							<div class="hero-figure-box hero-figure-box-01" data-rotation="45deg"></div>
+							<div class="hero-figure-box hero-figure-box-02" data-rotation="-45deg"></div>
+							<div class="hero-figure-box hero-figure-box-03" data-rotation="0deg"></div>
+							<div class="hero-figure-box hero-figure-box-04" data-rotation="-135deg"></div>
+							<div class="hero-figure-box hero-figure-box-05"></div>
+							<div class="hero-figure-box hero-figure-box-06"></div>
+							<div class="hero-figure-box hero-figure-box-07"></div>
+							<div class="hero-figure-box hero-figure-box-08" data-rotation="-22deg"></div>
+							<div class="hero-figure-box hero-figure-box-09" data-rotation="-52deg"></div>
+							<div class="hero-figure-box hero-figure-box-10" data-rotation="-50deg"></div>
+						</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="pricing section" id="command-generator-area">
+                <div class="container">
+                    <div class="pricing-inner section-inner" style="padding-bottom: 50px;">
+                        <div class="pricing-header text-center">
+                            <h2 class="section-title mt-0">Let's Try It Out</h2>
+                            <p class="section-paragraph mb-0">Just select what you need from the drop down</p>
+                        </div>
+						<div class="pricing-tables-wrap">
+                            <div class="pricing-table" style="width:1000px; display: flex; justify-content: center; flex-direction: column;">
+                                <div class="pricing-table-inner is-revealing">
+                                    <div class="pricing-table-main">
+                                        <div class="font-family: 'IBM Plex Sans', sans-serif'">
+                                            <div style="display:flex; flex-direction: column">
+                                                <label for="frontend" style="font-size: 14px; padding-bottom: 8px;">Project Name</label>
+                                                <input name="project" id="project-name" style="border-radius: 4px; border: none; outline: none; padding: 6px; letter-spacing: 1px; font-weight: 200; font-size: 14px; background: rgba(225, 237, 248, 0.9); padding-left: 10px;" type="text" placeholder="Enter the name of your project...">
+                                            </div>
+                                            <div style="display:flex; flex-direction: column">
+                                                <label for="frontend" style="font-size: 14px; padding-top: 8px; padding-bottom: 8px;">Frontend Technology</label>
+                                                <select name="frontend" id="frontend-tech" style="border-radius: 4px; border: none; outline: none; padding: 10px; letter-spacing: 1px; font-weight: 200; font-size: 14px; background: rgba(225, 237, 248, 0.9);">
+                                                    <option value="react">React.js</option>
+                                                    <option value="next">Next.js</option>
+                                                    <option value="vue">Vue.js</option>
+                                                </select>
+                                            </div>
+                                            <div style="display:flex; flex-direction: column">
+                                                <label for="frontend" style="font-size: 14px; padding-top: 8px; padding-bottom: 8px;">Server Technology</label>
+                                                <select name="backend" id="backend-tech" style="border-radius: 4px; border: none; outline: none; padding: 10px; letter-spacing: 1px; font-weight: 200; font-size: 14px; background: rgba(225, 237, 248, 0.9);">
+                                                    <option value="node">Node.js</option>
+                                                    <option value="flask">Flask</option>
+                                                    <option value="django">Django</option>
+                                                </select>
+                                            </div>
+                                            <div style="display:flex; flex-direction: column">
+                                                <label for="frontend" style="font-size: 14px; padding-top: 8px; padding-bottom: 8px;">Database</label>
+                                                <select name="database" id="database-tech" style="border-radius: 4px; border: none; outline: none; padding: 10px; letter-spacing: 1px; font-weight: 200; font-size: 14px; background: rgba(225, 237, 248, 0.9); margin-bottom: 20px;">
+                                                    <option value="firebase">Firebase</option>
+                                                    <option value="mongodb">MongoDB</option>
+                                                    <option value="mysql">MySQL</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pricing-table-cta mb-8">
+                                        <button class="button button-primary button-shadow button-block" onclick="generateCommand()">Generate</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cta section" style="margin-top: 30px; width: 800px; height: 200px; display: none;" id="command-area">
+                                <div class="container">
+                                    <div class="cta-inner section-inner" style="border-radius: 4px; display: flex; flex-direction: column; align-items: center;justify-content: center; height: 100%; color: rgba(225, 237, 248, 0.9); cursor: pointer;">
+                                        <p style="margin: 0; letter-spacing: 2px;" id="command-place"></p>
+                                        <p style="margin: 0; font-size: 14px; padding-top: 15px;">Command copied to clipboard.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features section">
+                <div class="container">
+                    <hr>
+                    <div class="features-inner section-inner has-bottom-divider">
+                        <div class="features-wrap">
+                            <div class="feature text-center is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<img src="dist/images/feature-icon-01.svg" alt="Feature 01">
+                                    </div>
+                                    <h4 class="feature-title mt-24">Be Productive</h4>
+                                    <p class="text-sm mb-0">Previously, you have to do everything on your own. Bootstrap all the basic template. With Accell, we have changed your focus to be more productive by elimating all the grunt work.</p>
+                                </div>
+                            </div>
+							<div class="feature text-center is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<img src="dist/images/feature-icon-02.svg" alt="Feature 02">
+                                    </div>
+                                    <h4 class="feature-title mt-24">Be Efficient</h4>
+                                    <p class="text-sm mb-0">Accell is simple and easy-to-use. You don't need to create all the directories, files, do configurations. Accell is efficiently designed to take care of everything for you.</p>
+                                </div>
+                            </div>
+                            <div class="feature text-center is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<img src="dist/images/feature-icon-03.svg" alt="Feature 03">
+                                    </div>
+                                    <h4 class="feature-title mt-24">Save Time</h4>
+                                    <p class="text-sm mb-0">Earlier, you spend hours configuring your project, setting up frontend, writing backend starter code, integrating database, etc. With Accell, all can be done under two minutes.</p>
+                                </div>
+                            </div>
+                            <div class="feature text-center is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<img src="dist/images/feature-icon-04.svg" alt="Feature 04">
+                                    </div>
+                                    <h4 class="feature-title mt-24">Open-source</h4>
+                                    <p class="text-sm mb-0">Accell is entirely open-source and licensed under MIT. It means anyone is free to use the code and build something with it. And on top, it provides an opportunity for developers worldwide to contribute to it.</p>
+                                </div>
+                            </div>
+							<div class="feature text-center is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<img src="dist/images/feature-icon-05.svg" alt="Feature 05">
+                                    </div>
+                                    <h4 class="feature-title mt-24">Support</h4>
+                                    <p class="text-sm mb-0">Accell supports a wide variety of technologies for both frontend and backend. It also currently supports three databases. So you can generate web stacks by just picking up technologies you like in it.</p>
+                                </div>
+                            </div>
+                            <div class="feature text-center is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<img src="dist/images/feature-icon-06.svg" alt="Feature 06">
+                                    </div>
+                                    <h4 class="feature-title mt-24">Maintained</h4>
+                                    <p class="text-sm mb-0">Accell is backed by a team of four developers who ensures you are getting what you are expecting. They are constantly introducing new features, fixing bugs, making releases, and more.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+			<section class="cta section" style="margin-top: 100px;">
+				<div class="container responsive">
+					<div class="cta-inner section-inner" style="display: flex; flex-direction:column; align-items: center">
+						<h3 class="section-title mt-0">Developers Behind Accell</h3>
+                        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+                            <div style="width: 250px; height: 400px; margin-top: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                <img src="https://avatars.githubusercontent.com/u/44341551?v=4" width="70%" style="border-radius: 50%;" alt="Saad Irfan">
+                                <p style="padding-top: 20px; font-size: 20px;">Saad Irfan</p>
+                            </div>
+                            <div style="width: 250px; height: 400px; margin-top: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                <img src="https://avatars.githubusercontent.com/u/18748983?v=4" width="70%" style="border-radius: 50%;" alt="Krona Emmanuel">
+                                <p style="padding-top: 20px; font-size: 20px;">Krona Emmanuel</p>
+                            </div>
+                            <div style="width: 250px; height: 400px; margin-top: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                <img src="https://avatars.githubusercontent.com/u/46720444?v=4" width="70%" style="border-radius: 50%;" alt="Dawood Asghar">
+                                <p style="padding-top: 20px; font-size: 20px;">Dawood Asghar</p>
+                            </div>
+                            <div style="width: 250px; height: 400px; margin-top: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                <img src="https://i.imgur.com/UzQhVV5.png" width="70%" style="border-radius: 50%;" alt="Moosa Bukhari">
+                                <p style="padding-top: 20px; font-size: 20px;">Moosa Bukhari</p>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer-inner">
+                    <div class="brand footer-brand">
+						<a href="https://github.com/Accellll" target="_blank">
+							<img class="header-logo-image" src="dist/images/logo.svg" alt="Logo">
+						</a>
+                    </div>
+                    <ul class="footer-links list-reset">
+                        <li>
+                            <a href="mailto:accell@gmail.com">Contact</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Accellll">About us</a>
+                        </li>
+                    </ul>
+                    <ul class="footer-social-links list-reset">
+                        <li>
+                            <a href="https://www.facebook.com/accell">
+                                <span class="screen-reader-text">Facebook</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z" fill="#0270D7"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/accell">
+                                <span class="screen-reader-text">Twitter</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z" fill="#0270D7"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://google.com/accell">
+                                <span class="screen-reader-text">Google</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z" fill="#0270D7"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer-copyright">&copy; 2022 Accell, all rights reserved</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="dist/js/main.min.js"></script>
+    <script>
+        function generateCommand() {
+            const projectName = document.getElementById('project-name').value;
+            const fe = document.getElementById('frontend-tech').value;
+            const be = document.getElementById('backend-tech').value;
+            const db = document.getElementById('database-tech').value;
+            const commandArea = document.getElementById('command-area');
+            const placeCommand = document.getElementById('command-place');
+
+            const command = `npx accell ${projectName} --${fe} --${be} --${db}`;
+            placeCommand.innerText = command;
+            commandArea.style.display = 'block';
+            navigator.clipboard.writeText(command).then().catch((err)=> {console.log(err);});
+        }
+    </script>
+</body>
+</html>
