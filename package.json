@@ -1,6 +1,6 @@
 {
 	"name": "accell",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Instantly Generate Boilerplate Across Multiple Stacks",
 	"repository": "https://github.com/Accellll/Accell",
 	"author": {
@@ -30,6 +30,6 @@
 		"exit-cli": "^1.0.3",
 		"node-async-exec": "^1.2.0",
 		"node-cli-handle-error": "^1.0.0",
-		"ora": "^5.1.0"
+		"ora": "^4.1.1"
 	}
 }
