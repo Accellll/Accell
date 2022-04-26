@@ -11,7 +11,8 @@
 	},
 	"files": [
 		"index.js",
-		"src/*"
+		"src/*",
+		"functions/*"
 	],
 	"main": "index.js",
 	"license": "MIT",
