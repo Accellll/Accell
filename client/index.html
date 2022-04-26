@@ -27,7 +27,7 @@
         </header>
 
         <main>
-            <section class="hero">
+            <section class="hero" style="height: 100vh;">
                 <div class="container">
                     <div class="hero-inner">
 						<div class="hero-copy">
@@ -54,9 +54,9 @@
                 </div>
             </section>
 
-            <section class="pricing section" style="padding-bottom: 50px">
+            <section class="pricing section">
                 <div class="container">
-                    <div class="pricing-inner section-inner">
+                    <div class="pricing-inner section-inner" style="padding-bottom: 50px;">
                         <div class="pricing-header text-center">
                             <h2 class="section-title mt-0">Let's Try It Out</h2>
                             <p class="section-paragraph mb-0">Just select what you need from the drop down</p>
@@ -68,11 +68,11 @@
                                         <div class="font-family: 'IBM Plex Sans', sans-serif'">
                                             <div style="display:flex; flex-direction: column">
                                                 <label for="frontend" style="font-size: 14px; padding-bottom: 8px;">Project Name</label>
-                                                <input name="" id="" style="border-radius: 4px; border: none; outline: none; padding: 6px; letter-spacing: 1px; font-weight: 200; font-size: 14px; background: rgba(225, 237, 248, 0.9); padding-left: 10px;" type="text" placeholder="Enter the name of your project..." value="">
+                                                <input name="project" id="project-name" style="border-radius: 4px; border: none; outline: none; padding: 6px; letter-spacing: 1px; font-weight: 200; font-size: 14px; background: rgba(225, 237, 248, 0.9); padding-left: 10px;" type="text" placeholder="Enter the name of your project...">
                                             </div>
                                             <div style="display:flex; flex-direction: column">
                                                 <label for="frontend" style="font-size: 14px; padding-top: 8px; padding-bottom: 8px;">Frontend Technology</label>
-                                                <select name="" id="" style="border-radius: 4px; border: none; outline: none; padding: 10px; letter-spacing: 1px; font-weight: 200; font-size: 14px; background: rgba(225, 237, 248, 0.9);">
+                                                <select name="frontend" id="frontend-tech" style="border-radius: 4px; border: none; outline: none; padding: 10px; letter-spacing: 1px; font-weight: 200; font-size: 14px; background: rgba(225, 237, 248, 0.9);">
                                                     <option value="react">React.js</option>
                                                     <option value="next">Next.js</option>
                                                     <option value="vue">Vue.js</option>
@@ -80,31 +80,31 @@
                                             </div>
                                             <div style="display:flex; flex-direction: column">
                                                 <label for="frontend" style="font-size: 14px; padding-top: 8px; padding-bottom: 8px;">Server Technology</label>
-                                                <select name="" id="" style="border-radius: 4px; border: none; outline: none; padding: 10px; letter-spacing: 1px; font-weight: 200; font-size: 14px; background: rgba(225, 237, 248, 0.9);">
-                                                    <option value="react">Node.js</option>
-                                                    <option value="next">Flask</option>
-                                                    <option value="vue">Django</option>
+                                                <select name="backend" id="backend-tech" style="border-radius: 4px; border: none; outline: none; padding: 10px; letter-spacing: 1px; font-weight: 200; font-size: 14px; background: rgba(225, 237, 248, 0.9);">
+                                                    <option value="node">Node.js</option>
+                                                    <option value="flask">Flask</option>
+                                                    <option value="django">Django</option>
                                                 </select>
                                             </div>
                                             <div style="display:flex; flex-direction: column">
                                                 <label for="frontend" style="font-size: 14px; padding-top: 8px; padding-bottom: 8px;">Database</label>
-                                                <select name="" id="" style="border-radius: 4px; border: none; outline: none; padding: 10px; letter-spacing: 1px; font-weight: 200; font-size: 14px; background: rgba(225, 237, 248, 0.9); margin-bottom: 20px;">
-                                                    <option value="react">Firebase</option>
-                                                    <option value="next">MongoDB</option>
-                                                    <option value="vue">MySQL</option>
+                                                <select name="database" id="database-tech" style="border-radius: 4px; border: none; outline: none; padding: 10px; letter-spacing: 1px; font-weight: 200; font-size: 14px; background: rgba(225, 237, 248, 0.9); margin-bottom: 20px;">
+                                                    <option value="firebase">Firebase</option>
+                                                    <option value="mongodb">MongoDB</option>
+                                                    <option value="mysql">MySQL</option>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="pricing-table-cta mb-8">
-                                        <a class="button button-primary button-shadow button-block" href="#">Generate</a>
+                                        <button class="button button-primary button-shadow button-block" onclick="generateCommand()">Generate</button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="cta section" style="margin-top: 30px; width: 800px; height: 200px;">
+                            <div class="cta section" style="margin-top: 30px; width: 800px; height: 200px; display: none;" id="command-area">
                                 <div class="container">
                                     <div class="cta-inner section-inner" style="border-radius: 4px; display: flex; align-items: center; height: 100%; justify-content: center; color: rgba(225, 237, 248, 0.9); cursor: pointer;">
-                                        <p style="margin: 0;">npx accell example --react --node --mongodb</p>
+                                        <p style="margin: 0;" id="command-place"></p>
                                     </div>
                                 </div>
                             </div>
@@ -286,5 +286,19 @@
     </div>
 
     <script src="dist/js/main.min.js"></script>
+    <script>
+        function generateCommand() {
+            const projectName = document.getElementById('project-name').value;
+            const fe = document.getElementById('frontend-tech').value;
+            const be = document.getElementById('backend-tech').value;
+            const db = document.getElementById('database-tech').value;
+            const commandArea = document.getElementById('command-area');
+            const placeCommand = document.getElementById('command-place');
+
+            const command = `npx accell ${projectName} --${fe} --${be} --${db}`;
+            placeCommand.innerText = command;
+            commandArea.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
